@@ -1,2 +1,2 @@
 #!/bin/bash
-if [ -e iacta ], then tail -n 1 iacta | tee -a iacta; else echo "File 'iacta' does not exist.", fi
+tail -1 iacta >> iacta
