@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "Number of directories: $dir_count",echo "Number of sub-directories: $sub_dir_count"
+find . -mindepth 1 -type d | wc -l
