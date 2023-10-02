@@ -1,0 +1,2 @@
+#!/bin/bash
+echo "Number of directories: $dir_count",echo "Number of sub-directories: $sub_dir_count"
