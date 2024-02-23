@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# This script displays hours and minutes for a 12-hour clock
+
+hour=0
+while [ $hour -lt 12 ]; do
+    echo "Hour: $hour"
+    for ((minute=1; minute<=59; minute++)); do
+        echo $minute
+    done
+    ((hour++))
+done

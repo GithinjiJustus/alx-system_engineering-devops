@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# This script displays messages for specific loop iterations
+
+count=0
+while [ $count -lt 20 ]; do
+    case $count in
+        3)
+            echo "4 and then bad luck from China";;
+        8)
+            echo "9 and then bad luck from Japan";;
+        16)
+            echo "17 and then bad luck from Italy";;
+        *)
+            echo $((count + 1));;
+    esac
+    ((count++))
+done
