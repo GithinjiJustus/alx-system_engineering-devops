@@ -1,0 +1,46 @@
+# Simple Web Stack
+
+This folder contains files related to the design of a simple web stack for Task 0 of the Web Infrastructure Design project.
+
+## Contents:
+
+1. [diagram.png](./diagram.png): Screenshot of the whiteboard diagram representing the simple web stack.
+2. [explanation.md](./explanation.md): Detailed explanation of the components and specifics of the infrastructure.
+
+# Simple Web Stack Explanation
+
+## Components:
+1. **User Accessing Website:**
+   - A user initiates a request to access the website www.foobar.com.
+
+2. **Server:**
+   - Utilizes a single server to host the entire infrastructure.
+
+3. **Domain Name (www.foobar.com):**
+   - Represents the website's address and is configured with a DNS record pointing to the server's IP address (8.8.8.8).
+
+4. **Web Server (Nginx):**
+   - Serves static content and handles incoming HTTP requests from clients.
+
+5. **Application Server:**
+   - Executes application logic and processes dynamic content requests.
+
+6. **Application Files:**
+   - Contains the codebase of the website/application.
+
+7. **Database (MySQL):**
+   - Stores and manages website/application data.
+
+## Specifics:
+- **Server Role:** Acts as a centralized platform to host the web infrastructure.
+- **Domain Name Role:** Provides a human-readable address for accessing the website.
+- **www DNS Record Type:** Represents a subdomain and is configured to direct traffic to the web server.
+- **Web Server Role:** Handles HTTP requests, serving static content to clients.
+- **Application Server Role:** Executes application logic, generating dynamic content for users.
+- **Database Role:** Stores and manages website/application data.
+- **Communication Protocol:** The server communicates with the user's computer using the HTTP protocol.
+
+## Issues:
+- **SPOF (Single Point of Failure):** Reliance on a single server poses a risk of downtime if it fails.
+- **Downtime During Maintenance:** Deploying new code or restarting the web server may cause temporary downtime.
+- **Scalability Concerns:** Inability to handle high traffic volumes efficiently due to limited server resources.

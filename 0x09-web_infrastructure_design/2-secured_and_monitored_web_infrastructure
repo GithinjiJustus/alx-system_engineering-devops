@@ -1,0 +1,44 @@
+# Secured and Monitored Web Infrastructure
+
+This folder contains files related to the design of a secured and monitored web infrastructure for Task 2 of the Web Infrastructure Design project.
+
+## Contents:
+
+1. [diagram.png](./diagram.png): Screenshot of the whiteboard diagram representing the secured and monitored web infrastructure.
+2. [explanation.md](./explanation.md): Detailed explanation of the components and specifics of the infrastructure.
+
+# Secured and Monitored Web Infrastructure Explanation
+
+## Components:
+1. **Web Servers (Nginx):**
+   - Multiple web servers serve encrypted traffic over HTTPS.
+
+2. **Application Servers:**
+   - Executes application logic and processes dynamic content requests.
+
+3. **Load Balancer (HAProxy):**
+   - Distributes incoming HTTPS traffic across web servers.
+
+4. **Firewalls:**
+   - Implemented to control and monitor incoming and outgoing network traffic for enhanced security.
+
+5. **SSL Certificate:**
+   - Used to encrypt traffic between clients and servers, ensuring data confidentiality.
+
+6. **Monitoring Clients:**
+   - Installed on each server to collect performance and usage data for monitoring purposes.
+
+## Specifics:
+- **Additional Elements Rationale:** 
+   - Firewalls added for network security and traffic control.
+   - SSL certificate ensures secure communication between clients and servers.
+   - Monitoring clients collect and transmit performance data to monitoring tools.
+- **Firewall Role:** Protects the infrastructure by filtering and controlling network traffic.
+- **HTTPS Traffic:** Serves encrypted traffic to ensure data confidentiality and integrity.
+- **Monitoring Purpose:** Collects data on server performance, usage, and availability for proactive issue detection and resolution.
+- **QPS Monitoring:** Utilizes monitoring tools to track and analyze web server's Query Per Second (QPS) metric for performance evaluation.
+
+## Issues:
+- **SSL Termination Issue:** Terminating SSL at the load balancer level exposes potential security risks.
+- **Single MySQL Server for Writes:** Single point of failure and scalability limitation for write operations.
+- **Uniform Server Components:** Homogeneous server components increase vulnerability to widespread failures.

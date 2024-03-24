@@ -1,0 +1,40 @@
+# Distributed Web Infrastructure
+
+This folder contains files related to the design of a distributed web infrastructure for Task 1 of the Web Infrastructure Design project.
+
+## Contents:
+
+1. [diagram.png](./diagram.png): Screenshot of the whiteboard diagram representing the distributed web infrastructure.
+2. [explanation.md](./explanation.md): Detailed explanation of the components and specifics of the infrastructure.
+
+# Distributed Web Infrastructure Explanation
+
+## Components:
+1. **Web Servers (Nginx):**
+   - Multiple web servers distribute incoming HTTP requests and serve static content.
+
+2. **Application Server:**
+   - Executes application logic and processes dynamic content requests.
+
+3. **Load Balancer (HAProxy):**
+   - Distributes incoming traffic across multiple web servers using a specified distribution algorithm (e.g., Round Robin).
+
+4. **Application Files:**
+   - Contains the codebase of the website/application.
+
+5. **Database (MySQL):**
+   - Utilizes a primary-replica (master-slave) cluster to replicate data and ensure high availability.
+
+## Specifics:
+- **Additional Elements Rationale:** 
+   - Multiple servers and load balancer added for scalability and redundancy.
+   - Load balancer ensures even distribution of traffic among web servers.
+- **Load Balancer Algorithm:** Configured with Round Robin algorithm to evenly distribute requests.
+- **Active-Active Setup:** Both servers actively handle requests simultaneously.
+- **Database Cluster Operation:** Primary-replica cluster ensures data replication for fault tolerance.
+- **Primary vs. Replica Node:** Primary node handles write operations, while replica nodes replicate data for read operations.
+
+## Issues:
+- **SPOF:** Load balancer represents a single point of failure.
+- **Security Concerns:** Lack of firewall protection and HTTPS encryption exposes infrastructure to potential security threats.
+- **Monitoring Absence:** Absence of monitoring tools leaves infrastructure vulnerable to performance and stability issues.
