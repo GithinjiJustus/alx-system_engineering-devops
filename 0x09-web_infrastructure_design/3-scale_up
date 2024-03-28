@@ -1,0 +1,31 @@
+# Scale Up
+
+## Introduction
+
+In this task, we aim to scale up our web infrastructure by introducing additional components and splitting existing ones to improve performance and reliability.
+
+## Requirements
+
+- **1 Server:**
+  - We will add one server to accommodate the increased load and distribute the workload effectively.
+
+- **1 Load-Balancer (HAProxy) Configured as Cluster with Another One:**
+  - HAProxy will be configured as a cluster with another instance to provide high availability and distribute incoming traffic across multiple servers.
+
+- **Split Components:**
+  - The components, including the web server, application server, and database, will be split onto their own individual servers. This separation enhances scalability, fault isolation, and resource management.
+
+## Specifics
+
+- **Additional Elements Rationale:**
+  - Adding another server and load-balancer enhances scalability and fault tolerance, ensuring the infrastructure can handle increased traffic and recover from failures.
+  
+- **Load-Balancer Configuration:**
+  - HAProxy will be configured as a cluster with another instance to provide redundancy and distribute traffic evenly across servers, improving performance and reliability.
+  
+- **Splitting Components:**
+  - Splitting components onto separate servers allows for better resource allocation, isolation of faults, and easier management and scaling of individual components.
+
+## Conclusion
+
+By implementing the above requirements and specifics, we aim to enhance the scalability, reliability, and performance of our web infrastructure to meet the demands of increased traffic and ensure seamless operation.
