@@ -15,6 +15,9 @@ In this task, we aim to scale up our web infrastructure by introducing additiona
 - **Split Components:**
   - The components, including the web server, application server, and database, will be split onto their own individual servers. This separation enhances scalability, fault isolation, and resource management.
 
+## URL
+https://miro.com/welcomeonboard/ekpsQ0lCQlkxYnBTT1pZekRvaUlRd2lhU3ZQNmtIWU51TEdmZkNsNUVnSGV0am5HRElxVmR4UzNLN2VpY0pkZnwzNDU4NzY0NTU4ODk3MjE5MTE5fDI=?share_link_id=404027333533
+
 ## Specifics
 
 - **Additional Elements Rationale:**
