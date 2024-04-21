@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# This script configures the local SSH client
+
+# Create or edit the SSH client configuration file
+cat <<EOF > ~/.ssh/config
+Host *
+    IdentityFile ~/.ssh/school
+    PasswordAuthentication no
+EOF
