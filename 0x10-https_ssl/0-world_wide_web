@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+# This script displays information about subdomains
+
+# Function to display subdomain information
+display_subdomain_info() {
+    domain="$1"
+    subdomain="$2"
+    if [ -z "$subdomain" ]; then
+        subdomains=("www" "lb-01" "web-01" "web-02")
+    else
+        subdomains=("$subdomain")
+    fi
+
+    for sub in "${subdomains[@]}"; do
+        result=$(dig "$sub.$domain" | awk '/ANSWER SECTION/ {getline; print}')
+        echo "The subdomain $sub is a $result record and points to $(dig +short "$sub.$domain")"
+    done
+}
+
+# Main function
+main() {
+    if [ "$#" -lt 1 ]; then
+        echo "Usage: $0 domain [subdomain]"
+        exit 1
+    fi
+
+    domain="$1"
+    subdomain="$2"
+    display_subdomain_info "$domain" "$subdomain"
+}
+
+# Call main function with command line arguments
+main "$@"
